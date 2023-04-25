@@ -26,7 +26,7 @@ The WeatherTrack App is a FastAPI web application that provides weather informat
 
 1. Open Terminal and run the following command:
    ```
-   git clone 
+   git clone https://github.com/EASS-HIT-PART-A-2022-CLASS-III/WeatherTrack.git
    ```
    
 2. Navigate into the project file
