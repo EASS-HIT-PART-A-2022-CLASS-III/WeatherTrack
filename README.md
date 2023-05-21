@@ -5,6 +5,12 @@ The WeatherTrack App is a FastAPI web application that provides weather informat
 
 <img src="https://static.vecteezy.com/system/resources/previews/001/500/512/non_2x/cloudy-weather-icon-free-vector.jpg" alt="alt text" width="150"/>
 
+## Demo
+
+[![Video](https://img.youtube.com/vi/J8uWCvW1SLQ/0.jpg)](https://www.youtube.com/watch?v=J8uWCvW1SLQ)
+
+
+
 ## Functionalities
 
  - Get list of all cities in Israel
@@ -21,6 +27,8 @@ The WeatherTrack App is a FastAPI web application that provides weather informat
 1. Install Docker on your machine.
 2. Make sure that the containers name 'MongoDB' is available for use.
 3. Install Git
+4. Make sure that Ports 8000 & 3000 are set and available
+
 
 ## Instructions 
 
@@ -36,27 +44,26 @@ The WeatherTrack App is a FastAPI web application that provides weather informat
    
 3. Running the app:
    ```
-   docker compose up
+   cd frontend/; docker build -t frontend; cd ..;
    ```
-   * If needed
    ```
-   docker-compose down && docker-compose build
+   docker-compose down && docker-compose build && docker-compose up
    ```
 
 4. The WeatherTrack app is running now, open the browser and type:
    ```
-   http://localhost:8000/ 
+   http://localhost:3000/ 
    ```
    * Another option: 
    ```
-    http://0.0.0.0:8000
+    http://0.0.0.0:3000
    ```
 
 ### For example:
 
 <img src="https://serving.photos.photobox.com/30932987331323fa3a94095d4ab1ffbd1eee493e3de14865ec6406bdb57eb9dd1a9a10fc.jpg" alt="alt text" width="200"/>
 
-##  Run unit_tests:
+##  Run unit_tests (backend validate):
 
 1. Go into backend folder:
    ```
@@ -70,23 +77,24 @@ The WeatherTrack App is a FastAPI web application that provides weather informat
 <img src="https://serving.photos.photobox.com/19890047c2184b9559bd8d635225f1343f06dea47d2b620ecefbdc0e2dbe3ae2b74eac1b.jpg" alt="alt text" width="500"/>
 
 
-   
 ## Technologies which used in the project:
 
-* Frontend: React + Vite (Going forward 15/05/2023)
+* Frontend: React
 
 * Backend: FastAPI (Python)
 
 * Database: MongoDB
+
+* Microservices: docker-compose
    
 
 ## Design Diagram
 
-      ┌───────────────────────┐                                               ****************************
-      │   WeatherTrack App    │                                               *                          *
-      │   (FastAPI web app)   │                                               *     By Omer Boucris      *
-      └────────────┬──────────┘                                               *                          *
-                  │                                                           ****************************   
+      ┌───────────────────────┐                                     ****************************
+      │   WeatherTrack App    │                                     *                          *
+      │   (FastAPI web app)   │                                     *     By Omer Boucris      *
+      └────────────┬──────────┘                                     *                          *
+                  │                                                 ****************************   
          Use OpenWeatherMap API
                   │
       ┌────────────┴─────────────┐

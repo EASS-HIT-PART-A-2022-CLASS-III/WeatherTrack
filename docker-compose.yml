@@ -23,6 +23,16 @@ services:
     container_name: WeatherTrack-backend
     networks:
       - app-network
+      
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: WeatherTrack-frontend
+    networks:
+      - app-network
 
 networks:
   app-network:

@@ -21,20 +21,32 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 app = FastAPI()
+
 origins = [
     "http://localhost:8000",
+    "http://localhost:3000",
 ]
 
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = origins,
+    allow_credentials = True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-@app.middleware("http") # applied to all HTTP requests.
-async def add_cors_header(request: Request, call_next):
-    response = await call_next(request)
-    response.headers["Access-Control-Allow-Origin"] = "*"
-    response.headers["Access-Control-Allow-Credentials"] = "true"
-    response.headers["Access-Control-Allow-Methods"] = "*"
-    response.headers["Access-Control-Allow-Headers"] = "*"
-    return response
+
+
+
+# @app.middleware("http") # applied to all HTTP requests.
+# async def add_cors_header(request: Request, call_next):
+#     response = await call_next(request)
+#     response.headers["Access-Control-Allow-Origin"] = "http://localhost:3000"
+#     response.headers["Access-Control-Allow-Credentials"] = "false"
+#     response.headers["Access-Control-Allow-Methods"] = "*"
+#     response.headers["Access-Control-Allow-Headers"] = "*"
+#     return response
 
 
 
