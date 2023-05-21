@@ -1,5 +1,5 @@
 
-# Weather Track App 
+# Weather Track App - By Omer Boucris
 The WeatherTrack App is a FastAPI web application that provides weather information using the OpenWeatherMap API. The app allows users to get weather information for specific cities in Israel or a list of selected cities. The app also uses MongoDB to store and retrieve board data, but the functionality related to the board has been commented out.
 
 
@@ -59,9 +59,17 @@ The WeatherTrack App is a FastAPI web application that provides weather informat
     http://0.0.0.0:3000
    ```
 
-### For example:
+## Screenshots:
+
+Verify Backend:
 
 <img src="https://serving.photos.photobox.com/30932987331323fa3a94095d4ab1ffbd1eee493e3de14865ec6406bdb57eb9dd1a9a10fc.jpg" alt="alt text" width="200"/>
+
+Verify frontend && backend:
+
+<img src="https://i.ibb.co/10f3dQ6/Screenshot-2023-05-15-at-20-41-12.png" alt="alt text" width="400"/>
+<img src="https://i.ibb.co/GfSZJm9/Screenshot-2023-05-15-at-20-40-59.png" alt="alt text" width="320"/>
+
 
 ##  Run unit_tests (backend validate):
 
